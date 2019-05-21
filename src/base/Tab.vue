@@ -41,10 +41,10 @@ export default {
     color: #009688;
   }
   a.router-link-active {
-    color: #FFB800;
+    color: #ffb800;
   }
-  span{
-    padding-top: 4px
+  span {
+    padding-top: 4px;
   }
 }
 </style>
