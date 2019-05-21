@@ -2,7 +2,12 @@
 
 > A Vue.js project 
 
-> This is a system for fruit and vegetable stores.
+- This is a system for fruit and vegetable stores.
+
+> Dependence on Use:
+```
+ npm install less less-loader axios vuex element-ui
+```  
 
 ## Build Setup
 
