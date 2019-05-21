@@ -8,13 +8,13 @@
       <i class="iconfont icon-huoche"></i>
       <span>进货</span>
     </router-link>
-    <router-link to="/home">
-      <i class="iconfont icon-jinrudianpu"></i>
-      <span>店铺</span>
+    <router-link to="/stock">
+      <i class="iconfont icon-stock"></i>
+      <span>库存</span>
     </router-link>
-    <router-link to="/stockPurchase">
-      <i class="iconfont icon-huoche"></i>
-      <span>进货</span>
+    <router-link to="/reportForm">
+      <i class="iconfont icon-tongjibaobiao"></i>
+      <span>报表</span>
     </router-link>
   </div>
 </template>
@@ -38,14 +38,13 @@ export default {
     flex: 1;
     justify-content: center;
     align-items: center;
-    color: yellowgreen;
+    color: #009688;
   }
   a.router-link-active {
-    color: orange;
+    color: #FFB800;
   }
-  i {
-    width: 20px;
-    height: auto;
+  span{
+    padding-top: 4px
   }
 }
 </style>
