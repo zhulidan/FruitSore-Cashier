@@ -1,6 +1,7 @@
 # FruitSore-Cashier
 
 > A Vue.js project 
+
 > This is a system for fruit and vegetable stores.
 
 ## Build Setup
