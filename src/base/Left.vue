@@ -35,7 +35,7 @@ export default {
 <style lang="less" scoped>
 .left{
   width: 80px;
-  height: 99.73%;
+  height: 99.76%;
   color: #c2c2c2;
   background-color: #20222a;
   li{
