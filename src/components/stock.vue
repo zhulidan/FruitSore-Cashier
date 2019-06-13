@@ -51,6 +51,14 @@ export default {
             supplier:'Hansom',
             number:'100',
             state:'充足'
+          },
+          {
+            type:'水果蔬菜',
+            name:'进口香蕉',
+            product:'美国加州',
+            supplier:'Hansom',
+            number:'100',
+            state:'充足'
           }
         ]
       }
