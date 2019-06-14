@@ -7,7 +7,7 @@
     </div>
     <div class="table-list">
       <ul>
-        <li v-for="(item,ind) in tableList" :key="ind">
+        <li v-for="(item,ind) in tableList" :key="ind" :class="item.status=='warning'?'warning':''">
           <span v-for="(key,index) in menu" :key="index">{{item[key.field]}}</span>
         </li>
       </ul>
@@ -46,6 +46,7 @@
         flex-direction: column;
         flex: 1;
       }
+
     }
 
     .table-list {
@@ -55,7 +56,9 @@
         display: flex;
         border-bottom: 1px solid #e8e8e8;
       }
-
+      li.warning{
+        color: #ff0000;
+      }
       span {
         line-height: 35px;
         display: flex;

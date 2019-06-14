@@ -1,17 +1,22 @@
 <template>
-    <div>
-        <Header>果子侠客 - 报表</Header>
-        <div class="content"></div>
+  <div>
+    <Header>果子侠客 - 报表</Header>
+    <div class="content">
+      <Left></Left>
     </div>
+  </div>
 </template>
 <script>
-import Header from '../base/Header'
-export default {
+  import Header from '../base/Header';
+  import Left from '../base/Left';
+
+  export default {
     name: 'reportForm',
-    components:{
-        Header
+    components: {
+      Header,
+      Left
     }
-}
+  }
 </script>
 
 <style>

@@ -6,11 +6,12 @@ import router from './router'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import Echars from  'echarts';
 
 import './assets/css/base.css';
 import './assets/css/style.css';
-Vue.use(ElementUI)
-
+Vue.use(ElementUI);
+Vue.use(Echars);
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

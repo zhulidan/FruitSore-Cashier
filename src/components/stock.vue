@@ -2,21 +2,25 @@
     <div>
         <Header>果子侠客 - 库存</Header>
         <div class="content">
+          <Search :inputPlaceholder="inputPlaceholder"></Search>
           <Table :menu = "tableMenu" :tableList="tableData"></Table>
         </div>
     </div>
 </template>
 <script>
-import Header from '../base/Header'
-import Table from '../base/Table'
+import Header from '../base/Header';
+import Table from '../base/Table';
+import Search from '../base/search';
 export default {
     name: 'stock',
     components:{
-        Header,
-      Table
+      Header,
+      Table,
+      Search
     },
     data(){
       return {
+        inputPlaceholder:'搜索产品或供货商名称',
         tableMenu:[
           {
             name:'品类',
@@ -50,7 +54,8 @@ export default {
             product:'美国加州',
             supplier:'Hansom',
             number:'100',
-            state:'充足'
+            state:'预警',
+            status:'warning'
           },
           {
             type:'水果蔬菜',
@@ -58,15 +63,18 @@ export default {
             product:'美国加州',
             supplier:'Hansom',
             number:'100',
-            state:'充足'
+            state:'充足',
+            status:''
           }
         ]
       }
     }
 }
 </script>
-
 <style>
-
+  .el-input__inner{
+    height: 35px;
+    line-height: 35px;
+  }
 </style>
 
