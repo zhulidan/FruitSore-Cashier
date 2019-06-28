@@ -15,6 +15,16 @@ function readLeftVal(cb) {//用来读取数据的
         }
     })
 }
+//获取库存中的数据列表
+function readStockList(cb){
+    fs.readFile('./mock/json/stockData.json','utf8',function(err,data){
+        if(err || !data){
+            cb(data);
+        }else{
+            cb(JSON.parse(data))
+        }
+    })
+}
 http.createServer((req, res) => {//创建一个服务
     //由于服务器端为localhost:3000，前端的端口为localhost:8080，需在前端请求服务器端的代码，属于跨域，node.js 跨域请求头
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -33,6 +43,12 @@ http.createServer((req, res) => {//创建一个服务
             res.end(JSON.stringify(navs))
         })
         return;
+    }
+    if(pathname === '/stockList'){
+        readStockList(function(datas){
+            res.setHeader('Content-Type','application/json;charset=utf8');
+            res.end(JSON.stringify(datas));
+        })
     }
 
 }).listen(3000)

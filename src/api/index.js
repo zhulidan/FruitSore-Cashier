@@ -9,6 +9,9 @@ axios.interceptors.response.use(function (res) {
 export default {
   getLeftNavData: () => {
     return axios.get('/leftData');
+  },
+  getStockListData:()=>{
+    return axios.get("/stockList");
   }
 
 };

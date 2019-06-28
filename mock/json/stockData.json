@@ -1,0 +1,53 @@
+{
+    "code": "0",
+    "msg": "成功",
+    "result": {
+        "resultList": [
+            {
+                "type": "水果",
+                "name": "进口脐橙",
+                "product": "美国加州",
+                "supplier": "Hansom",
+                "number": "100",
+                "state": "充足",
+                "status": ""
+            },
+            {
+                "type": "水果",
+                "name": "进口香蕉",
+                "product": "美国加州",
+                "supplier": "Hansom",
+                "number": "10",
+                "state": "预警",
+                "status": "warning"
+            },
+            {
+                "type": "水果",
+                "name": "荔枝",
+                "product": "广西",
+                "supplier": "西家果园",
+                "number": "10",
+                "state": "预警",
+                "status": "warning"
+            },
+            {
+                "type": "蔬菜",
+                "name": "临沂新土豆",
+                "product": "山东",
+                "supplier": "果果菜园",
+                "number": "200",
+                "state": "充足",
+                "status": ""
+            },
+            {
+                "type": "蔬菜",
+                "name": "密云西红柿",
+                "product": "密云",
+                "supplier": "他家菜园",
+                "number": "200",
+                "state": "充足",
+                "status": ""
+            }
+        ]
+    }
+}

@@ -25,7 +25,6 @@
       // await getLeftNavData() 为请求/leftData后的数据
       async getLeftList() {
         var data = await api.getLeftNavData();
-        console.log(data)
         this.leftData = data.result.cateList
       }
 
