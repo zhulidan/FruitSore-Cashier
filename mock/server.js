@@ -35,7 +35,8 @@ http.createServer((req, res) => {//创建一个服务
         return res.end(); /*让options请求快速返回*/
     }
 
-    let { pathname, query } = url.parse(req.url);// 解析路径
+    let  {pathname,query} = url.parse(req.url,true);// 解析路径
+    // query = url.parse(req.url,true)
     if (pathname === '/leftData') {
         readLeftVal(function (navs) {
             // let hot = navs.reverse().slice(0, 6);//将获取的数据倒序，并截取前6个
@@ -45,10 +46,32 @@ http.createServer((req, res) => {//创建一个服务
         return;
     }
     if (pathname === '/stockList') {
-        readStockList(function (datas) {
-            res.setHeader('Content-Type', 'application/json;charset=utf8');
-            res.end(JSON.stringify(datas));
-        })
+        // let val = query.searchVal;//取出的id是字符串
+
+        if( query.searchVal){
+ 
+            let val = query.searchVal;
+            console.log(val)
+            readStockList(function (datas) {
+                // var ary = JSON.stringify(datas)
+                
+               let ary = datas.result.resultList.filter(item=>{
+                    return item.name === val || item.supplier === val;
+                })
+                
+                datas.result.resultList = ary;
+                if(!ary) datas.result.resultList = [];
+                res.setHeader('Content-Type', 'application/json;charset=utf8');
+                res.end(JSON.stringify(datas));
+            })
+        }else{//获取所有库存
+            readStockList(function (datas) {
+                res.setHeader('Content-Type', 'application/json;charset=utf8');
+                res.end(JSON.stringify(datas));
+            })
+        }
+        
+        return;
     }
 
 }).listen(3000)

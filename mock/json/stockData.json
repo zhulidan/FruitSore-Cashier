@@ -4,6 +4,7 @@
     "result": {
         "resultList": [
             {
+                "id":1,
                 "type": "水果",
                 "name": "进口脐橙",
                 "product": "美国加州",
@@ -13,6 +14,7 @@
                 "status": ""
             },
             {
+                "id":2,
                 "type": "水果",
                 "name": "进口香蕉",
                 "product": "美国加州",
@@ -22,6 +24,7 @@
                 "status": "warning"
             },
             {
+                "id":3,
                 "type": "水果",
                 "name": "荔枝",
                 "product": "广西",
@@ -31,6 +34,7 @@
                 "status": "warning"
             },
             {
+                "id":4,
                 "type": "蔬菜",
                 "name": "临沂新土豆",
                 "product": "山东",
@@ -40,6 +44,7 @@
                 "status": ""
             },
             {
+                "id":5,
                 "type": "蔬菜",
                 "name": "密云西红柿",
                 "product": "密云",

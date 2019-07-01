@@ -12,6 +12,8 @@ export default {
   },
   getStockListData:()=>{
     return axios.get("/stockList");
+  },
+  getOneStockInfo:(id)=>{
+    return  axios.get(`/stockList?searchVal=${id}`);
   }
-
 };

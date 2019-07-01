@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <el-input v-model="input" prefix-icon="el-icon-search" :placeholder="inputPlaceholder"></el-input>
+    <el-input prefix-icon="el-icon-search" v-model="input" :placeholder="inputPlaceholder" @change="searchInfo"></el-input>
   </div>
 </template>
 
@@ -12,6 +12,11 @@
     data() {
       return {
         input: ''
+      }
+    },
+    methods:{
+      searchInfo(){
+        this.$emit('search-event',this.input)
       }
     }
   }

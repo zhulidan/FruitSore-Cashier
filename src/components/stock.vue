@@ -2,7 +2,7 @@
   <div>
     <Header>果子侠客 - 库存</Header>
     <div class="content">
-      <Search :inputPlaceholder="inputPlaceholder"></Search>
+      <Search :inputPlaceholder="inputPlaceholder" @search-event="searchEventFn"></Search>
       <Table :menu="tableMenu" :tableList="tableData"></Table>
     </div>
   </div>
@@ -62,6 +62,11 @@ export default {
     // await getLeftNavData() 为请求/leftData后的数据
     async getStockList() {
       var data = await api.getStockListData();
+      this.tableData = data.result.resultList;
+    },
+    async searchEventFn(val){
+      var data = await api.getOneStockInfo(val);
+      // console.log(data.data)
       this.tableData = data.result.resultList;
     }
   }
