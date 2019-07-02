@@ -16,14 +16,23 @@
                 "title": "粮油作物"
             },
             {
-              "catId": "4173229",
-              "title": "禽畜蛋肉"
+                "catId": "4173229",
+                "title": "禽畜蛋肉"
             },
             {
                 "catId": "4632532",
                 "title": "海鲜荟萃"
             }
-
+        ],
+        "reportList": [
+            {
+                "title": "销量统计",
+                "to":"/reportForm"
+            },
+            {
+                "title": "进量统计",
+                "to":"/stockForm"
+            }
         ]
     }
 }

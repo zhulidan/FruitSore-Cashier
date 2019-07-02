@@ -24,6 +24,10 @@ export default new Router({
     {
       path: '/reportForm',
       component: () => import('../components/reportForm')
+    },
+    {
+      path: '/stockForm',
+      component: () => import('../components/stockForm')
     }
   ]
 })

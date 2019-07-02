@@ -10,3 +10,8 @@
   overflow: auto;
   background-color: #fbfbfb;
 }
+.right{
+  height: 99.8%;
+  margin-left:80px;
+  box-sizing: border-box
+}

@@ -47,18 +47,14 @@ http.createServer((req, res) => {//创建一个服务
     }
     if (pathname === '/stockList') {
         // let val = query.searchVal;//取出的id是字符串
-
         if( query.searchVal){
- 
             let val = query.searchVal;
             console.log(val)
             readStockList(function (datas) {
                 // var ary = JSON.stringify(datas)
-                
                let ary = datas.result.resultList.filter(item=>{
                     return item.name === val || item.supplier === val;
                 })
-                
                 datas.result.resultList = ary;
                 if(!ary) datas.result.resultList = [];
                 res.setHeader('Content-Type', 'application/json;charset=utf8');
@@ -70,7 +66,6 @@ http.createServer((req, res) => {//创建一个服务
                 res.end(JSON.stringify(datas));
             })
         }
-        
         return;
     }
 
