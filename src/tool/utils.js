@@ -1,17 +1,16 @@
 export default{
     //柱形图
     barChart: function (options, color,that) {
-        console.log(that)
         var dom = document.getElementById(options.dom);
         var myChart = that.Echars.init(dom);
         var option = {
             title: {
                 text: options.title,
-                x: 'center',
+                x: 'left',
                 textStyle: {
                     color: color,
-                    fontSize: 12,
-                    fontWeight: '500'
+                    fontSize: 14,
+                    fontWeight: '700'
                 }
             },
             grid: {
@@ -23,7 +22,9 @@ export default{
             },
             tooltip: {
                 trigger: 'axis',
-
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
             },
             color: [options.bg],
             xAxis: {
@@ -33,14 +34,14 @@ export default{
                 },
                 axisLine: {
                     lineStyle: {
-                        color: color
+                        color:"#d9d9d9"
                     }
                 },
                 axisTick: {
                     lineStyle: {
-                        color: color
+                        color:"#d9d9d9"
                     },
-                    show: false
+                    // show: false
                 },
                 axisLabel: {
                     textStyle: {
@@ -54,18 +55,24 @@ export default{
                 min: 1,
 
                 splitLine: {
-                    show: false
+                    show: true,
+                    lineStyle:{
+                        type:'dashed',
+                        color:"#e8e8e8"
+                    }
                 },
                 splitNumber: 2,
                 axisLine: {
                     lineStyle: {
                         color: color
                     },
+                    show: false//是否显示坐标轴线
                 },
                 axisTick: {
                     lineStyle: {
                         color: color
-                    }
+                    },
+                    show: false//是否显示刻度线
                 },
                 axisLabel: {
                     textStyle: {

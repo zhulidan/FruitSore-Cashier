@@ -11,7 +11,6 @@
 import Header from "../base/Header";
 import Table from "../base/Table";
 import Search from "../base/search";
-import api from "../api";
 export default {
   name: "stock",
   components: {
@@ -61,11 +60,11 @@ export default {
     // async await 为语法糖要成对使用，而await后面只能是promise的实例
     // await getLeftNavData() 为请求/leftData后的数据
     async getStockList() {
-      var data = await api.getStockListData();
+      var data = await this.Api.getStockListData();
       this.tableData = data.result.resultList;
     },
     async searchEventFn(val){
-      var data = await api.getOneStockInfo(val);
+      var data = await this.Api.getOneStockInfo(val);
       // console.log(data.data)
       this.tableData = data.result.resultList;
     }

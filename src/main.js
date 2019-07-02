@@ -12,10 +12,12 @@ import './assets/css/base.css';
 import './assets/css/style.css';
 
 import Utils from './tool/utils.js';
+import Api from "./api";
 Vue.use(ElementUI);
 // Vue.use(Echars);
 Vue.prototype.Echars = Echars;
 Vue.prototype.Utils = Utils;
+Vue.prototype.Api = Api;
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

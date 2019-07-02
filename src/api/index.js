@@ -15,5 +15,8 @@ export default {
   },
   getOneStockInfo:(id)=>{
     return  axios.get(`/stockList?searchVal=${id}`);
+  },
+  getReportBarCharts(){
+    return axios.get('/saleReport')
   }
 };

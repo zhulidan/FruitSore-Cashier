@@ -4,7 +4,7 @@
     <div class="content">
       <Left :reportList="true"></Left>
       <div class="right">
-         <div id="bar_chars" class="bar_chart"></div>
+        <div id="bar_chars" class="bar_chart"></div>
       </div>
     </div>
   </div>
@@ -21,24 +21,27 @@ export default {
   },
   mounted() {
     this.$nextTick(function() {
-      this.echarsBar2();
+      this.getBarChartData();
     });
   },
   methods: {
-    echarsBar2() {
+    async getBarChartData() {
+      var data = await this.Api.getReportBarCharts();
+       data = data.result;
+       
       var options = {
         dom: "bar_chars",
-        bg: "#ff9a22",
-        title: "",
-        xData: ["通勤车", "高峰车", "路过车"],
-        yData: [13499, 2523, 91757],
-        left: "3%",
-        right: "4%",
+        bg: "#3ba1ff",
+        title: data.title,
+        xData:data.dateList,
+        yData:data.list ,
+        left: "2%",
+        right: "3%",
         bottom: "3%",
-        top: "3%"
+        top: "40px"
       };
 
-      var ects = this.Utils.barChart(options, "#000", this);
+      var ects = this.Utils.barChart(options, "#666", this);
       window.onresize = function() {
         if (ects) {
           ects.resize();
@@ -50,8 +53,12 @@ export default {
 </script>
 
 <style  lang="less" scoped>
+.right {
+  padding-top: 20%;
+}
 .bar_chart {
-  margin:20% 5% 20%;
+  margin: 0 5% 20%;
+  padding-top: 10px;
   background: #fff;
   height: 60%;
 }
