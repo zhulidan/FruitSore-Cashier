@@ -18,5 +18,8 @@ export default {
   },
   getReportBarCharts(){
     return axios.get('/saleReport')
+  },
+  getIncrementBarCharts(){
+    return axios.get('/incrementReport')
   }
 };
