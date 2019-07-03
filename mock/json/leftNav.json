@@ -4,24 +4,24 @@
     "result": {
         "cateList": [
             {
-                "catId": "4173227",
-                "title": "优选水果"
+                "title": "优选水果",
+                "to":"/reportForm"
             },
             {
-                "catId": "4173228",
-                "title": "新鲜蔬菜"
+                "title": "新鲜蔬菜",
+                "to":"/reportForm"
             },
             {
-                "catId": "4173229",
-                "title": "粮油作物"
+                "title": "粮油作物",
+                "to":"/reportForm"
             },
             {
-                "catId": "4173229",
-                "title": "禽畜蛋肉"
+                "title": "禽畜蛋肉",
+                "to":"/reportForm"
             },
             {
-                "catId": "4632532",
-                "title": "海鲜荟萃"
+                "title": "海鲜荟萃",
+                "to":"/reportForm"
             }
         ],
         "reportList": [
@@ -31,7 +31,8 @@
             },
             {
                 "title": "进量统计",
-                "to":"/stockForm"
+                "to":"/reportForm/1",
+                "id":"1"
             }
         ]
     }

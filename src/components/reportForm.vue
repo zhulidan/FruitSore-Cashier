@@ -21,20 +21,53 @@ export default {
   },
   mounted() {
     this.$nextTick(function() {
-      this.getBarChartData();
+      this.getSaleBarChartData();
     });
   },
+  watch: {
+    // 监听,当路由发生变化的时候执行
+    $route(to, from) {
+      if (to.path == "/reportForm") {
+        this.getSaleBarChartData();
+      } else {
+        this.getBarChartData() 
+      }
+    }
+  },
   methods: {
-    async getBarChartData() {
+    async getSaleBarChartData() {
       var data = await this.Api.getReportBarCharts();
-       data = data.result;
-       
+      data = data.result;
+
       var options = {
         dom: "bar_chars",
         bg: "#3ba1ff",
         title: data.title,
-        xData:data.dateList,
-        yData:data.list ,
+        xData: data.dateList,
+        yData: data.list,
+        left: "2%",
+        right: "3%",
+        bottom: "3%",
+        top: "40px"
+      };
+
+      var ects = this.Utils.barChart(options, "#666", this);
+      window.onresize = function() {
+        if (ects) {
+          ects.resize();
+        }
+      };
+    },
+    async getBarChartData() {
+      var data = await this.Api.getIncrementBarCharts();
+      data = data.result;
+
+      var options = {
+        dom: "bar_chars",
+        bg: "#ff9a22",
+        title: data.title,
+        xData: data.dateList,
+        yData: data.list,
         left: "2%",
         right: "3%",
         bottom: "3%",

@@ -2,8 +2,7 @@
   <div class="left">
     <ul>
       <li v-for="(item,index) in leftData" :key="index">
-        <!-- {{item.title}} -->
-        <router-link :to="item.to">
+        <router-link :to="item.to" >
           <em></em>
           <span v-text="item.title"></span>
         </router-link>
@@ -58,12 +57,12 @@ export default {
       color: #c2c2c2;
     }
   }
-  a.router-link-active {
+  a.router-link-exact-active {
     display: block;
     color: #fff;
     background: #5fb878
   }
-    a.router-link-active em{
+    a.router-link-exact-active em{
       width: 6px;
       height: 40px;
       display: block;

@@ -12,7 +12,7 @@
       <i class="iconfont icon-stock"></i>
       <span>库存</span>
     </router-link>
-    <router-link to="/reportForm">
+    <router-link to="/reportForm" @click.prevent="gg">
       <i class="iconfont icon-tongjibaobiao"></i>
       <span>报表</span>
     </router-link>
@@ -20,7 +20,12 @@
 </template>
 <script>
 export default {
-  name: "Tab"
+  name: "Tab",
+  methods:{
+    gg(){
+      this.$router.push('/reportForm/1')
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

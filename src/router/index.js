@@ -11,23 +11,27 @@ export default new Router({
     },
     {
       path: '/home',
+      name: 'home',
       component: () => import('../components/home')
     },
     {
       path: '/stockPurchase',
+      name: 'stockPurchase',
       component: () => import('../components/stockPurchase')
     },
     {
       path: '/stock',
+      name: 'stock',
       component: () => import('../components/stock')
     },
     {
       path: '/reportForm',
-      component: () => import('../components/reportForm')
-    },
-    {
-      path: '/stockForm',
-      component: () => import('../components/stockForm')
+      name: '/reportForm',
+      component: () => import('../components/reportForm'),
+      children: [//children 中的路径永远不带/，如果带/表示是1级路由
+        { path: '1', component: () => import('../components/reportForm') },
+      
+      ]
     }
   ]
 })
