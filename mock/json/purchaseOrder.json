@@ -1,0 +1,43 @@
+{
+    "code": "0",
+    "msg": "成功",
+    "result": {
+        "resultList": [
+            {
+                "id":1,
+                "orderNumber": "420123001",
+                "orderName": "进口脐橙、进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-19 08:10:50",
+                "operation": "订单详情"
+            },
+            {
+                "id":2,
+                "orderNumber": "420123002",
+                "orderName": "临沂新土豆、荔枝、苹果",
+                "orderDate": "2019-03-17 08:00:00",
+                "operation": "订单详情"
+            },
+            {
+                "id":3,
+                "orderNumber": "420123003",
+                "orderName": "进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-19 08:10:50",
+                "operation": "订单详情"
+            },
+            {
+                "id":4,
+                "orderNumber": "420123004",
+                "orderName": "密云西红柿、进口脐橙、进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-09 08:10:50",
+                "operation": "订单详情"
+            },
+            {
+                "id":5,
+                "orderNumber": "420123005",
+                "orderName": "进口脐橙、进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-12 08:10:50",
+                "operation": "订单详情"
+            }
+        ]
+    }
+}

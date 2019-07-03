@@ -21,5 +21,8 @@ export default {
   },
   getIncrementBarCharts(){
     return axios.get('/incrementReport')
+  },
+  getPurchaseOrderData(){
+    return axios.get('/purchaseOrderList')
   }
 };

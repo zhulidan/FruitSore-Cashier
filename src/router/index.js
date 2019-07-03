@@ -15,9 +15,9 @@ export default new Router({
       component: () => import('../components/home')
     },
     {
-      path: '/stockPurchase',
-      name: 'stockPurchase',
-      component: () => import('../components/stockPurchase')
+      path: '/purchaseOrder',
+      name: 'purchaseOrder',
+      component: () => import('../components/purchaseOrder')
     },
     {
       path: '/stock',
@@ -30,7 +30,6 @@ export default new Router({
       component: () => import('../components/reportForm'),
       children: [//children 中的路径永远不带/，如果带/表示是1级路由
         { path: '1', component: () => import('../components/reportForm') },
-      
       ]
     }
   ]

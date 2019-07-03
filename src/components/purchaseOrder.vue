@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Header>果子侠客 - 进货</Header>
+    <Header>果子侠客 - 进货订单</Header>
     <div class="content">
       <Search :inputPlaceholder="inputPlaceholder"></Search>
-      <Table :menu="tableMenu" :tableList="tableData"></Table>
+      <Table :menu="tableMenu" :tableList="tableData" :isClick="true"></Table>
     </div>
   </div>
 </template>
@@ -24,27 +24,38 @@ export default {
       tableMenu: [
         {
           name: "订单编号",
-          field: "type"
+          field: "orderNumber"
         },
         {
           name: "订单名称",
-          field: "name"
+          field: "orderName"
         },
         {
           name: "订单日期",
-          field: "product"
+          field: "orderDate"
         },
         {
           name: "操作",
-          field: "supplier"
+          field: "operation"
         }
       ],
       tableData: []
     };
+  },
+  mounted(){
+    this.$nextTick(function(){
+      this.getOrderList()
+    })
+  },
+  methods:{
+    async getOrderList(){
+      var datas = await this.Api.getPurchaseOrderData();
+      this.tableData = datas.result.resultList;
+    }
   }
 };
 </script>
 
-<style>
+ <style lang="less" scoped>
 </style>
 

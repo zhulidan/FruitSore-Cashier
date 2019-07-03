@@ -4,7 +4,7 @@
       <i class="iconfont icon-jinrudianpu"></i>
       <span>店铺</span>
     </router-link>
-    <router-link to="/stockPurchase">
+    <router-link to="/purchaseOrder">
       <i class="iconfont icon-huoche"></i>
       <span>进货</span>
     </router-link>
