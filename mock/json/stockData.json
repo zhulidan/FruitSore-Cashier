@@ -35,6 +35,16 @@
             },
             {
                 "id":4,
+                "type": "水果",
+                "name": "美国车厘子",
+                "product": "美国",
+                "supplier": "American",
+                "number": "200",
+                "state": "充足",
+                "status": ""
+            },
+            {
+                "id":5,
                 "type": "蔬菜",
                 "name": "临沂新土豆",
                 "product": "山东",
@@ -44,12 +54,52 @@
                 "status": ""
             },
             {
-                "id":5,
+                "id":6,
                 "type": "蔬菜",
                 "name": "密云西红柿",
                 "product": "密云",
                 "supplier": "他家菜园",
                 "number": "200",
+                "state": "充足",
+                "status": ""
+            },
+            {
+                "id":7,
+                "type": "蔬菜",
+                "name": "白玉北豆腐",
+                "product": "北京",
+                "supplier": "北京白玉豆制品公司",
+                "number": "2",
+                "state": "预警",
+                "status": "warning"
+            },
+            {
+                "id":8,
+                "type": "禽畜蛋肉",
+                "name": "初产柴鸡蛋10枚",
+                "product": "北京",
+                "supplier": "蛋宝宝",
+                "number": "2",
+                "state": "预警",
+                "status": "warning"
+            },
+            {
+                "id":9,
+                "type": "禽畜蛋肉",
+                "name": "巴西进口鸡翅中",
+                "product": "巴西",
+                "supplier": "Chicken Meat Shop",
+                "number": "200",
+                "state": "充足",
+                "status": ""
+            },
+            {
+                "id":10,
+                "type": "粮油作物",
+                "name": "安心绿豆",
+                "product": "山东",
+                "supplier": "那家粮油铺",
+                "number": "50",
                 "state": "充足",
                 "status": ""
             }

@@ -24,5 +24,8 @@ export default {
   },
   getPurchaseOrderData(){
     return axios.get('/purchaseOrderList')
+  },
+  getOnePurchaseOrderInfo(proName){
+    return  axios.get(`/purchaseOrderList?searchOrder=${proName}`);
   }
 };

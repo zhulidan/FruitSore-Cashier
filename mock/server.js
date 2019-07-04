@@ -26,7 +26,7 @@ function readStockList(cb) {
     })
 }
 
-function readSalesReport(cb){
+function readSalesReport(cb) {
     fs.readFile('./mock/json/salesStatistics.json', 'utf8', function (err, data) {
         if (err || !data) {
             console.log(err, data)
@@ -37,7 +37,7 @@ function readSalesReport(cb){
     })
 }
 
-function readIncrementReport(cb){
+function readIncrementReport(cb) {
     fs.readFile('./mock/json/incrementStatistics.json', 'utf8', function (err, data) {
         if (err || !data) {
             console.log(err, data)
@@ -48,7 +48,7 @@ function readIncrementReport(cb){
     })
 }
 
-function readPurchaseOrder(cb){
+function readPurchaseOrder(cb) {
     fs.readFile('./mock/json/purchaseOrder.json', 'utf8', function (err, data) {
         if (err || !data) {
             console.log(err, data)
@@ -68,7 +68,7 @@ http.createServer((req, res) => {//创建一个服务
         return res.end(); /*让options请求快速返回*/
     }
 
-    let  {pathname,query} = url.parse(req.url,true);// 解析路径
+    let { pathname, query } = url.parse(req.url, true);// 解析路径
 
     //左侧导航
     if (pathname === '/leftData') {
@@ -82,20 +82,19 @@ http.createServer((req, res) => {//创建一个服务
     //库存
     if (pathname === '/stockList') {
         // let val = query.searchVal;//取出的id是字符串
-        if( query.searchVal){
+        if (query.searchVal) {
             let val = query.searchVal;
-            console.log(val)
             readStockList(function (datas) {
                 // var ary = JSON.stringify(datas)
-               let ary = datas.result.resultList.filter(item=>{
+                let ary = datas.result.resultList.filter(item => {
                     return item.name === val || item.supplier === val;
                 })
                 datas.result.resultList = ary;
-                if(!ary) datas.result.resultList = [];
+                if (!ary) datas.result.resultList = [];
                 res.setHeader('Content-Type', 'application/json;charset=utf8');
                 res.end(JSON.stringify(datas));
             })
-        }else{//获取所有库存
+        } else {//获取所有库存
             readStockList(function (datas) {
                 res.setHeader('Content-Type', 'application/json;charset=utf8');
                 res.end(JSON.stringify(datas));
@@ -105,25 +104,43 @@ http.createServer((req, res) => {//创建一个服务
     }
 
     //报表
-    if(pathname === "/saleReport"){
+    if (pathname === "/saleReport") {
         readSalesReport(function (datas) {
             res.setHeader('Content-Type', 'application/json;charset=utf8');
             res.end(JSON.stringify(datas))
         })
         return;
     }
-    if(pathname === "/incrementReport"){
+    if (pathname === "/incrementReport") {
         readIncrementReport(function (datas) {
             res.setHeader('Content-Type', 'application/json;charset=utf8');
             res.end(JSON.stringify(datas))
         })
         return;
     }
-    if(pathname === "/purchaseOrderList"){
-        readPurchaseOrder(function(datas){
-            res.setHeader('Content-Type', 'application/json;charset=utf8');
-            res.end(JSON.stringify(datas))
-        })
+    //进货订单
+    if (pathname === "/purchaseOrderList") {
+        if (query.searchOrder) {//搜索
+            let val = query.searchOrder;
+            readPurchaseOrder(function (datas) {
+                // var ary = JSON.stringify(datas)
+                let ary = datas.result.resultList.filter(item => {
+                    return item.orderName.indexOf(val) != -1
+                })
+                datas.result.resultList = ary.reverse();
+                if (!ary) datas.result.resultList = [];
+                
+                res.setHeader('Content-Type', 'application/json;charset=utf8');
+                res.end(JSON.stringify(datas));
+            })
+        } else {
+            readPurchaseOrder(function (datas) {
+                res.setHeader('Content-Type', 'application/json;charset=utf8');
+                datas.result.resultList = datas.result.resultList.reverse();
+                res.end(JSON.stringify(datas))
+            })
+        }
+
         return;
     }
 

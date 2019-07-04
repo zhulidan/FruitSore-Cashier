@@ -5,11 +5,22 @@
         <li v-for="(item,index) in menu" :key="index">{{item.name}}</li>
       </ul>
     </div>
-    <div class="table-list">
+    <div class="table-list" id="tableBox">
       <p v-if="tableList.length == 0">暂无数据</p>
       <ul>
         <li v-for="(item,ind) in tableList" :key="ind" :class="item.status=='warning'?'warning':''">
-          <span v-for="(key,index) in menu" :key="index">{{item[key.field]}}</span>
+          <template v-if="isClick">
+            <span
+              v-for="(key,index) in menu"
+              :key="index"
+              :title="isClick&&key.field!='operation'?item[key.field]:''"
+              :style="{width:isClick?tdWidth+'px':''}"
+            > 
+              <em v-if='key.field!="operation"'>{{item[key.field]}}</em>
+              <a href="#" v-else @click.prevent="getOrderInfo(item.orderNumber)">{{item[key.field]}}</a>  
+            </span>
+          </template>
+          <span v-else v-for="(key,index) in menu" :key="index">{{item[key.field]}}</span>
         </li>
       </ul>
     </div>
@@ -19,7 +30,30 @@
 <script>
 export default {
   name: "Table",
-  props: ["menu", "tableList"]
+  props: ["menu", "tableList", "isClick"],
+  data() {
+    return {
+      tdWidth: ""
+    };
+  },
+  mounted() {
+    this.$nextTick(function() {
+      this.getTableTdWidth();
+    });
+  },
+  methods: {
+    getTableTdWidth() {
+      if (this.isClick) {
+        var ele = document.getElementById("tableBox");
+        this.tdWidth = parseFloat(
+          ele.offsetWidth / this.menu.length - this.menu.length - 1
+        ).toFixed(2);
+      }
+    },
+    getOrderInfo(orderNum){
+      this.$emit("order-info",orderNum)
+    }
+  }
 };
 </script>
 
@@ -63,13 +97,23 @@ export default {
     li.warning {
       color: #ff0000;
     }
-    span {
+    li span {
       line-height: 35px;
       display: flex;
       flex-direction: column;
       flex: 1;
-      display: block;
+      display: inline-block;
       text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      a{
+        color: #32a8ff
+      }
+      a:hover{
+        color: #ffb800
+      }
     }
   }
 }

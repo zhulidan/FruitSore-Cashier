@@ -2,8 +2,8 @@
   <div>
     <Header>果子侠客 - 进货订单</Header>
     <div class="content">
-      <Search :inputPlaceholder="inputPlaceholder"></Search>
-      <Table :menu="tableMenu" :tableList="tableData" :isClick="true"></Table>
+      <Search :inputPlaceholder="inputPlaceholder"  @search-event="searchEventFn"></Search>
+      <Table :menu="tableMenu" :tableList="tableData" :isClick="true" @order-info="getOrderInfoFn"></Table>
     </div>
   </div>
 </template>
@@ -51,6 +51,14 @@ export default {
     async getOrderList(){
       var datas = await this.Api.getPurchaseOrderData();
       this.tableData = datas.result.resultList;
+    },
+    getOrderInfoFn(num){
+      console.log(num)
+    },
+    async searchEventFn(val){
+      var data = await this.Api.getOnePurchaseOrderInfo(val);
+       this.tableData = data.result.resultList;
+      console.log(data)
     }
   }
 };
