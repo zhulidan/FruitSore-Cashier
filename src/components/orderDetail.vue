@@ -67,12 +67,11 @@ export default {
   mounted() {
     this.$nextTick(function() {
       this.getOrderDetailList();
-      console.log()
     });
   },
   methods: {
     async getOrderDetailList() {
-      var orderId = this.$route.params.orderId;
+      var orderId = this.$route.params.orderId;//获取订单编号
       var data = await this.Api.getOrderDetailData(orderId);
       this.tableData = data.result.resultList[0].list;
       this.orderInfo = data.result.resultList[0]
