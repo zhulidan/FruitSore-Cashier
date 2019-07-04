@@ -2,8 +2,9 @@
   <div>
     <Header>果子侠客 - 进货订单</Header>
     <div class="content">
-      <Search :inputPlaceholder="inputPlaceholder"  @search-event="searchEventFn"></Search>
+      <Search :inputPlaceholder="inputPlaceholder" @search-event="searchEventFn"></Search>
       <Table :menu="tableMenu" :tableList="tableData" :isClick="true" @order-info="getOrderInfoFn"></Table>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -42,23 +43,22 @@ export default {
       tableData: []
     };
   },
-  mounted(){
-    this.$nextTick(function(){
-      this.getOrderList()
-    })
+  mounted() {
+    this.$nextTick(function() {
+      this.getOrderList();
+    });
   },
-  methods:{
-    async getOrderList(){
+  methods: {
+    async getOrderList() {
       var datas = await this.Api.getPurchaseOrderData();
       this.tableData = datas.result.resultList;
     },
-    getOrderInfoFn(num){
-      console.log(num)
+    getOrderInfoFn(num) {
+      this.$router.push({path: `/purchaseOrder/${num}`})
     },
-    async searchEventFn(val){
+    async searchEventFn(val) {
       var data = await this.Api.getOnePurchaseOrderInfo(val);
-       this.tableData = data.result.resultList;
-      console.log(data)
+      this.tableData = data.result.resultList;
     }
   }
 };

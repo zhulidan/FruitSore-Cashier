@@ -16,9 +16,16 @@ export default new Router({
     },
     {
       path: '/purchaseOrder',
-      name: 'purchaseOrder',
-      component: () => import('../components/purchaseOrder')
+      name: '/purchaseOrder',
+      component: () => import('../components/purchaseOrder'),
+      children: [//children 中的路径永远不带/，如果带/表示是1级路由
+        {
+          path: ':id',
+          component: () => import('../components/orderDetail')
+        },
+      ]
     },
+    
     {
       path: '/stock',
       name: 'stock',
