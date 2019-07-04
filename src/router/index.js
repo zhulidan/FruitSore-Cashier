@@ -20,7 +20,7 @@ export default new Router({
       component: () => import('../components/purchaseOrder'),
       children: [//children 中的路径永远不带/，如果带/表示是1级路由
         {
-          path: ':id',
+          path: ':orderId',
           component: () => import('../components/orderDetail')
         },
       ]

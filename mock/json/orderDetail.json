@@ -1,0 +1,401 @@
+{
+    "code": "0",
+    "msg": "成功",
+    "result": {
+
+        "resultList": [
+            {
+                "id":1,
+                "orderNumber": "420123001",
+                "orderName": "进口脐橙、进口香蕉、临沂新土豆",
+                "orderDate": "2019-02-19 08:10:50",
+                "purchaser": "张小飞",
+                "total":"1500",
+                "list":[
+                    {
+                        "name":"进口脐橙",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"100斤",
+                        "unitPrice":"10",
+                        "totalPrice":"1000"
+                    },
+                    {
+                        "name":"进口香蕉",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"50斤",
+                        "unitPrice":"6",
+                        "totalPrice":"300"
+                    },
+                    {
+                        "name":"临沂新土豆",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"2",
+                        "totalPrice":"200"
+                    }
+                ]
+            },
+            {
+                "id":2,
+                "orderNumber": "420123002",
+                "orderName": "临沂新土豆、荔枝、苹果",
+                "orderDate": "2019-03-17 08:00:00",
+                "purchaser": "李晴",
+                "total":"1100",
+                "list":[
+                    {
+                        "name":"临沂新土豆",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"80斤",
+                        "unitPrice":"1.5",
+                        "totalPrice":"120"
+                    },
+                    {
+                        "name":"荔枝",
+                        "product":"广西",
+                        "supplier":"西家果园",
+                        "number":"80斤",
+                        "unitPrice":"10",
+                        "totalPrice":"800"
+                    },
+                    {
+                        "name":"进口香蕉",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"30斤",
+                        "unitPrice":"6",
+                        "totalPrice":"180"
+                    }
+                    
+                ]
+            },
+            {
+                "id":3,
+                "orderNumber": "420123003",
+                "orderName": "进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-10 08:10:50",
+                "purchaser": "李晴",
+                "total":"400",
+                "list":[
+                    {
+                        "name":"进口香蕉",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"50斤",
+                        "unitPrice":"5",
+                        "totalPrice":"250"
+                    },
+                    {
+                        "name":"临沂新土豆",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"1.5",
+                        "totalPrice":"150"
+                    }
+                    
+                ]
+            },
+            {
+                "id":4,
+                "orderNumber": "420123004",
+                "orderName": "密云西红柿、进口脐橙、进口香蕉、临沂新土豆",
+                "orderDate": "2019-03-11 08:10:50",
+                "purchaser": "张淼",
+                "total":"2000",
+                "list":[
+                    {
+                        "name":"密云西红柿",
+                        "product":"密云",
+                        "supplier":"密云果菜园",
+                        "number":"100斤",
+                        "unitPrice":"5",
+                        "totalPrice":"500"
+                    },
+                    {
+                        "name":"进口脐橙",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"100斤",
+                        "unitPrice":"10",
+                        "totalPrice":"1000"
+                    },
+                    {
+                        "name":"进口香蕉",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"50斤",
+                        "unitPrice":"6",
+                        "totalPrice":"300"
+                    },
+                    {
+                        "name":"临沂新土豆",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"2",
+                        "totalPrice":"200"
+                    }
+                ]
+            },
+            {
+                "id":5,
+                "orderNumber": "420123005",
+                "orderName": "进口脐橙、黄瓜、临沂新土豆",
+                "orderDate": "2019-03-12 08:10:50",
+                "purchaser": "张淼",
+                "total":"1400",
+                "list":[
+                    {
+                        "name":"进口脐橙",
+                        "product":"美国加州",
+                        "supplier":"Hansom",
+                        "number":"100斤",
+                        "unitPrice":"10",
+                        "totalPrice":"1000"
+                    },
+                    {
+                        "name":"黄瓜",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"50斤",
+                        "unitPrice":"4",
+                        "totalPrice":"200"
+                    },
+                    {
+                        "name":"临沂新土豆",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"2",
+                        "totalPrice":"200"
+                    }
+                ]
+            },
+            {
+                "id":6,
+                "orderNumber": "420123006",
+                "orderName": "紫长茄、西葫芦、西兰花",
+                "orderDate": "2019-04-12 08:10:50",
+                "purchaser": "李晴",
+                "total":"1020",
+                "list":[
+                    {
+                        "name":"紫长茄",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"80斤",
+                        "unitPrice":"4",
+                        "totalPrice":"320"
+                    },
+                    {
+                        "name":"西葫芦",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"50斤",
+                        "unitPrice":"4",
+                        "totalPrice":"200"
+                    },
+                    {
+                        "name":"西兰花",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"5",
+                        "totalPrice":"500"
+                    }
+                ]
+            },
+            {
+                "id":7,
+                "orderNumber": "420123007",
+                "orderName": "白玉北豆腐、樱桃小番茄、胡萝卜",
+                "orderDate": "2019-05-12 08:10:50",
+                "purchaser": "李晴",
+                "total":"820",
+                "list":[
+                    {
+                        "name":"白玉北豆腐",
+                        "product":"北京",
+                        "supplier":"北京白玉豆制品公司",
+                        "number":"20盒",
+                        "unitPrice":"6",
+                        "totalPrice":"120"
+                    },
+                    {
+                        "name":"樱桃小番茄",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"50斤",
+                        "unitPrice":"4",
+                        "totalPrice":"200"
+                    },
+                    {
+                        "name":"胡萝卜",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"5",
+                        "totalPrice":"500"
+                    }
+                ]
+            },
+            {
+                "id":8,
+                "orderNumber": "420123008",
+                "orderName": "旱黄瓜、娃娃菜、新疆哈密瓜",
+                "orderDate": "2019-05-22 08:10:50",
+                "purchaser": "张小飞",
+                "total":"1600",
+                "list":[
+                    {
+                        "name":"旱黄瓜",
+                        "product":"密云",
+                        "supplier":"密云果菜园",
+                        "number":"150斤",
+                        "unitPrice":"6",
+                        "totalPrice":"900"
+                    },
+                    {
+                        "name":"娃娃菜",
+                        "product":"密云",
+                        "supplier":"密云果菜园",
+                        "number":"50斤",
+                        "unitPrice":"4",
+                        "totalPrice":"200"
+                    },
+                    {
+                        "name":"新疆哈密瓜",
+                        "product":"新疆",
+                        "supplier":"新疆欣欣菜园",
+                        "number":"100斤",
+                        "unitPrice":"5",
+                        "totalPrice":"500"
+                    }
+                ]
+            },
+            {
+                "id":9,
+                "orderNumber": "420123009",
+                "orderName": "麒麟瓜、杨梅、紫玉葡萄",
+                "orderDate": "2019-06-22 08:10:50",
+                "purchaser": "张小飞",
+                "total":"4100",
+                "list":[
+                    {
+                        "name":"麒麟瓜",
+                        "product":"密云",
+                        "supplier":"密云果菜园",
+                        "number":"500斤",
+                        "unitPrice":"6",
+                        "totalPrice":"3000"
+                    },
+                    {
+                        "name":"杨梅",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"50斤",
+                        "unitPrice":"12",
+                        "totalPrice":"600"
+                    },
+                    {
+                        "name":"紫玉葡萄",
+                        "product":"山东",
+                        "supplier":"果果菜园",
+                        "number":"100斤",
+                        "unitPrice":"5",
+                        "totalPrice":"500"
+                    }
+                ]
+            },
+            {
+                "id":10,
+                "orderNumber": "420123010",
+                "orderName": "东北大米、海底捞自煮火锅、胡姬花古法小榨花生油、陈克明鸡蛋挂面",
+                "orderDate": "2019-06-22 10:10:50",
+                "purchaser": "张小飞",
+                "total":"11450",
+                "list":[
+                    {
+                        "name":"东北大米",
+                        "product":"五常",
+                        "supplier":"五常大米专供",
+                        "number":"50袋",
+                        "unitPrice":"50",
+                        "totalPrice":"2500"
+                    },
+                    {
+                        "name":"海底捞自煮火锅",
+                        "product":"山东",
+                        "supplier":"山东天天粮油铺",
+                        "number":"50个",
+                        "unitPrice":"35",
+                        "totalPrice":"1750"
+                    },
+                    {
+                        "name":"胡姬花古法小榨花生油",
+                        "product":"山东",
+                        "supplier":"山东天天粮油铺",
+                        "number":"30桶",
+                        "unitPrice":"150",
+                        "totalPrice":"4500"
+                    },
+                    {
+                        "name":"陈克明鸡蛋挂面",
+                        "product":"山东",
+                        "supplier":"山东天天粮油铺",
+                        "number":"30箱",
+                        "unitPrice":"90",
+                        "totalPrice":"2700"
+                    }
+                ]
+            },
+            {
+                "id":11,
+                "orderNumber": "420123011",
+                "orderName": "鲜猪五花条、牛腩、松花皮蛋、柴鸡蛋",
+                "orderDate": "2019-06-22 10:30:50",
+                "purchaser": "张小飞",
+                "total":"4750",
+                "list":[
+                    {
+                        "name":"鲜猪五花条",
+                        "product":"河北",
+                        "supplier":"河北实时鲜肉",
+                        "number":"100斤",
+                        "unitPrice":"10",
+                        "totalPrice":"1000"
+                    },
+                    {
+                        "name":"牛腩",
+                        "product":"河北",
+                        "supplier":"河北实时鲜肉",
+                        "number":"50斤",
+                        "unitPrice":"35",
+                        "totalPrice":"1750"
+                    },
+                    {
+                        "name":"松花皮蛋",
+                        "product":"山东",
+                        "supplier":"山东天天粮油铺",
+                        "number":"5箱",
+                        "unitPrice":"80",
+                        "totalPrice":"400"
+                    },
+                    {
+                        "name":"柴鸡蛋",
+                        "product":"山东",
+                        "supplier":"山东天天粮油铺",
+                        "number":"200",
+                        "unitPrice":"8",
+                        "totalPrice":"1600"
+                    }
+                ]
+            }
+        ]
+    }
+}
