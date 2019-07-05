@@ -58,7 +58,7 @@ function readPurchaseOrder(cb) {
         }
     })
 }
-
+//订单详情
 function readOrderDetail(cb) {
     fs.readFile('./mock/json/orderDetail.json', 'utf8', function (err, data) {
         if (err || !data) {
@@ -140,7 +140,7 @@ http.createServer((req, res) => {//创建一个服务
                 })
                 datas.result.resultList = ary.reverse();
                 if (!ary) datas.result.resultList = [];
-                
+
                 res.setHeader('Content-Type', 'application/json;charset=utf8');
                 res.end(JSON.stringify(datas));
             })
@@ -166,11 +166,11 @@ http.createServer((req, res) => {//创建一个服务
                 })
                 datas.result.resultList = ary;
                 if (!ary) datas.result.resultList = [];
-                
+
                 res.setHeader('Content-Type', 'application/json;charset=utf8');
                 res.end(JSON.stringify(datas));
             })
-        } 
+        }
 
         return;
     }

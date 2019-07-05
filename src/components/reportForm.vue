@@ -2,7 +2,7 @@
   <div>
     <Header>果子侠客 - 报表</Header>
     <div class="content">
-      <Left :reportList="true"></Left>
+      <Left :reportList="true" @left-tab="leftClickList"></Left>
       <div class="right">
         <div id="bar_chars" class="bar_chart"></div>
       </div>
@@ -80,6 +80,13 @@ export default {
           ects.resize();
         }
       };
+    },
+    leftClickList(val){
+      if (val == 0) {
+        this.getSaleBarChartData();
+      } else {
+        this.getBarChartData() 
+      }
     }
   }
 };

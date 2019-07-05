@@ -1,11 +1,9 @@
 <template>
   <div class="left">
-    <ul>
-      <li v-for="(item,index) in leftData" :key="index">
-        <router-link :to="item.to" >
-          <em></em>
-          <span v-text="item.title"></span>
-        </router-link>
+    <ul ref="lefNav">
+      <li v-for="(item,index) in leftData" :key="index" :class="activeInd==index?'active':''" @click="leftNavClick(index)">
+        <em></em>
+        <span v-text="item.title"></span>
       </li>
     </ul>
   </div>
@@ -17,7 +15,8 @@ export default {
   props: ["reportList"],
   data() {
     return {
-      leftData: []
+      leftData: [],
+      activeInd: 0
     };
   },
   created() {
@@ -34,6 +33,10 @@ export default {
       } else {
         this.leftData = data.result.cateList;
       }
+    },
+    leftNavClick(ind) {
+      this.activeInd = ind;
+      this.$emit("left-tab",ind);
     }
   }
 };
@@ -53,24 +56,25 @@ export default {
     line-height: 40px;
     text-align: center;
     position: relative;
-    a{
+    cursor: pointer;
+    a {
       color: #c2c2c2;
     }
   }
-  a.router-link-exact-active {
+  li.active {
     display: block;
     color: #fff;
-    background: #5fb878
+    background: #5fb878;
   }
-    a.router-link-exact-active em{
-      width: 6px;
-      height: 40px;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: #ff5722
-    }
+  li.active em {
+    width: 6px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ff5722;
+  }
 }
 </style>
 

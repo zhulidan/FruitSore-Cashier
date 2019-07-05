@@ -1,0 +1,15 @@
+{
+    "code": "0",
+    "msg": "成功",
+    "result": {
+        "resultList": [
+            {
+                "id":1,
+                "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/48872/21/1765/74505/5cf883d8E3a44f88d/bc4b56779391ecb4.jpg",
+                "goodName": "进口脐橙",
+                "goodPrice": "11",
+                "goodUnit":"斤"
+            }
+        ]
+    }
+}
