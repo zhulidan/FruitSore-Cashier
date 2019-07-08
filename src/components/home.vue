@@ -6,7 +6,7 @@
       <div class="right">
         <div class="right_con">
           <Search :inputPlaceholder="inputPlaceholder" @search-event="searchEventFn"></Search>
-          <Product></Product>
+          <Product :productList="productList" :productFeild="productFiled" :type="true"></Product>
         </div>
       </div>
     </div>
@@ -27,11 +27,43 @@ export default {
   },
   data() {
     return {
-      inputPlaceholder: "搜索产品或供货商名称"
+      inputPlaceholder: "搜索产品或供货商名称",
+      productList: [],
+      productFiled: [
+        { filed: "goodImg" },
+        { filed: "goodName" },
+        { filed: "goodPrice" }
+      ]
     };
   },
+  mounted() {
+    this.$nextTick(function() {
+      this.getProductList();
+    });
+  },
   methods: {
-    leftClickList(val) {},
+    async getProductList(type) {
+      type = type ? type : "fruits";
+      var data = await this.Api.getSaleProductList(type);
+      console.log(data);
+      this.productList = data.result.resultList;
+    },
+    leftClickList(val) {
+        var type = "";
+        if(val==0){
+            type=  "fruits";
+        }else if(val==1){
+             type=  "vegetables";
+        }else if(val==2){
+            type=  "grainAndOil";
+        }else if(val==3){
+            type = "meatAndEggs"
+        }else if(val==4){
+            type ="seafood";
+        }
+        this.getProductList(type) 
+    },
+
     async searchEventFn(val) {}
   }
 };

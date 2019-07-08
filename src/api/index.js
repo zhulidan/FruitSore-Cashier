@@ -30,5 +30,8 @@ export default {
   },
   getOrderDetailData(orderId){
     return  axios.get(`/orderDetail?orderId=${orderId}`);
+  },
+  getSaleProductList(type){
+    return  axios.get(`/saleProduct?goodType=${type}`);
   }
 };

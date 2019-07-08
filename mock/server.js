@@ -69,6 +69,17 @@ function readOrderDetail(cb) {
         }
     })
 }
+//售出
+function readSaleProduct(cb){
+    fs.readFile('./mock/json/saleGoodData.json', 'utf8', function (err, data) {
+        if (err || !data) {
+            console.log(err, data)
+            cb(data);//如果有错误 或者文件没长度，就是空数组
+        } else {
+            cb(JSON.parse(data));//将读出来的内容转化成对象
+        }
+    })
+}
 http.createServer((req, res) => {//创建一个服务
     //由于服务器端为localhost:3000，前端的端口为localhost:8080，需在前端请求服务器端的代码，属于跨域，node.js 跨域请求头
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -174,5 +185,24 @@ http.createServer((req, res) => {//创建一个服务
 
         return;
     }
+
+    //售卖
+    if (pathname === "/saleProduct") {
+        if (query.goodType) {//搜索
+            let val = query.goodType;
+            readSaleProduct(function (datas) {
+                // var ary = JSON.stringify(datas)
+                let ary = datas.result.resultList[val]
+                datas.result.resultList = ary;
+                if (!ary) datas.result.resultList = [];
+
+                res.setHeader('Content-Type', 'application/json;charset=utf8');
+                res.end(JSON.stringify(datas));
+            })
+        }
+
+        return;
+    }
+
 
 }).listen(3000)

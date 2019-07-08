@@ -1,33 +1,133 @@
 <template>
   <div class="product">
     <div class="product_title">水果</div>
-    
+
     <div class="product_list">
-        <ul>
-            <li>
-                <span class="product_img"><img src=""> </span>
-                <span class="product_info"></span>
-            </li>
-        </ul>
+      <ul>
+        <template v-if="type">
+          <li v-for="(item,index) in productList" :key="index">
+            <div class="product_img">
+              <img :src="item.goodImg" />
+            </div>
+            <div class="product_info">
+              <div class="pro_tit">
+                <span class="pro_name" v-text="item.goodName"></span>
+                <span class="pro_price"><em>￥{{item.goodPrice}}</em> / {{item.goodUnit}}</span>
+              </div>
+              <div class="product_weight" v-if="item.goodUnit=='kg'">
+                  <span class="pro_weiNum">0.0kg</span>
+                  <span class="pro_weiBtn">称重</span>
+                  
+              </div>
+               <div class="product_num" v-if="item.goodUnit!='kg'">
+                  <Counter></Counter>
+              </div>
+            </div>
+          </li>
+        </template>
+      </ul>
     </div>
   </div>
 </template>
 <script>
+import Counter from "./counter";
 export default {
-  name: "product"
+  name: "product",
+  props: ["productList", "productFeild", "type"],
+  components:{
+      Counter
+  }
 };
 </script>
 <style lang="less" scoped>
 .product {
   .product_title {
-      width: 100%;
-      background: #ffb800;
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      line-height: 40px;
+    width: 100%;
+    background: #ffb800;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .pro_weiBtn{
+      width: 70px;
+      display: inline-block;
+      background: #33ab9f;
+      border-radius: 4px;
       text-align: center;
-      margin-top: 12px;
+      color: #fff;
+      line-height: 30px;
+  }
+  .pro_weiNum{
+      color: #33ab9f
+  }
+  .product_info{
+      width: 100%;
+      position: relative;
+  }
+  .product_weight{
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+  }
+  .pro_tit{
+      line-height: 30px;
+  }
+  .pro_price em{
+      font-size: 20px;
+      color: #FF5722
+  }
+  .product_num{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;  
+  } 
+}
+@media screen and (max-width: 767px) {
+  .product_list {
+    li {
+      display: flex;
+      padding: 10px 10px 10px 0;
+    }
+    .product_img {
+      float: left;
+      margin-top: 2px;
+      border-radius: 4px;
+      margin-right: 10px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .pro_name {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #393D49;
+      max-height: 42px;
+      line-height: 24px;
+      word-break: break-all;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .product_list {
+    li {
+      display: flex;
+      float: left;
+      width: 33.3333%;
+    }
+    .product_img {
+      margin-top: 2px;
+      border-radius: 4px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
 }
 </style>

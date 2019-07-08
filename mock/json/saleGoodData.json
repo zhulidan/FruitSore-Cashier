@@ -2,14 +2,197 @@
     "code": "0",
     "msg": "成功",
     "result": {
-        "resultList": [
-            {
-                "id":1,
-                "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/48872/21/1765/74505/5cf883d8E3a44f88d/bc4b56779391ecb4.jpg",
-                "goodName": "进口脐橙",
-                "goodPrice": "11",
-                "goodUnit":"斤"
-            }
-        ]
+        "resultList":{
+            "fruits":[
+                {
+                    "id":1,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/48872/21/1765/74505/5cf883d8E3a44f88d/bc4b56779391ecb4.jpg",
+                    "goodName": "进口脐橙",
+                    "goodPrice": "22",
+                    "goodUnit":"kg"
+                },
+                
+                {
+                    "id":2,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/52754/4/1082/160420/5ced085cE3ad324bf/f16738ae174d6bf9.jpg",
+                    "goodName": "荔枝妃子笑",
+                    "goodPrice": "31.4",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":3,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/30473/22/14412/129747/5cbd8ffbE038c3b74/64b4d323fe46fa98.jpg",
+                    "goodName": "红颜草莓礼盒",
+                    "goodPrice": "138",
+                    "goodUnit":"盒"
+                },
+                {
+                    "id":4,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/66492/39/507/69079/5cebc25fE51805baf/53b6dd0ced0c069b.jpg",
+                    "goodName": "京欣西瓜",
+                    "goodPrice": "1.9",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":5,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/18022/14/3121/33817/5c2443f4E977de2c0/b02fe3088f1b9974.jpg",
+                    "goodName": "进口牛油果",
+                    "goodPrice": "6",
+                    "goodUnit":"个"
+                }
+            ],
+            "vegetables":[
+                {
+                    "id":1,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t25042/294/2565768348/36129/1f0c3dfc/5bea4de0Ne3b1fdc7.jpg",
+                    "goodName": "小白菜",
+                    "goodPrice": "8",
+                    "goodUnit":"kg"
+                },
+                
+                {
+                    "id":2,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/17200/15/3113/43837/5c244e68E13c25913/516f50e7e711ca1d.jpg",
+                    "goodName": "菠菜",
+                    "goodPrice": "7.8",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":3,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t23335/306/2348305472/22447/ae27b597/5b7b8ff9N77b40f8c.jpg",
+                    "goodName": "彩椒",
+                    "goodPrice": "12",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":4,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/22094/12/3064/34719/5c244d3fE3883f93f/1ab4d88d06354314.jpg",
+                    "goodName": "黄瓜",
+                    "goodPrice": "4.8",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":5,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/29780/26/1084/35951/5c0f5b15E847cd300/f12abea313851c96.jpg",
+                    "goodName": "樱桃番茄双串装400g",
+                    "goodPrice": "8.8",
+                    "goodUnit":"袋"
+                }
+            ],
+            "grainAndOil":[
+                {
+                    "id":1,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/32700/7/9269/433239/5ca56575E64786e00/7cae4d0377619060.png",
+                    "goodName": "胡姬花古法小榨花生油900ML",
+                    "goodPrice": "32.9",
+                    "goodUnit":"桶"
+                },
+                
+                {
+                    "id":2,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/22272/19/4564/336761/5c32bbadEb1813ffc/54f04b97220753dc.jpg",
+                    "goodName": "五常大米长粒香米 5kg/袋",
+                    "goodPrice": "59.9",
+                    "goodUnit":"袋"
+                },
+                {
+                    "id":3,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1510/300/1081697199/98205/c2b56574/55bb06b6N2793129a.jpg",
+                    "goodName": "山西小米",
+                    "goodPrice": "7.9",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":4,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t19717/282/1774234819/42848/d5f80ee/5ad7192cN14d9bc14.jpg",
+                    "goodName": "红薯粉条",
+                    "goodPrice": "15.9",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":5,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t2299/35/1103312322/108192/412448d8/5678c7a9N986f99c3.jpg",
+                    "goodName": "金龙鱼高筋麦芯粉 5kg/袋",
+                    "goodPrice": "41.8",
+                    "goodUnit":"袋"
+                }
+            ],
+            "meatAndEggs":[
+                {
+                    "id":1,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/77357/27/803/1196232/5cf0c0ccE333e8f64/8e28509a7cdce451.png",
+                    "goodName": "精品肥牛 500g",
+                    "goodPrice": "45.8",
+                    "goodUnit":"盒"
+                },
+                
+                {
+                    "id":2,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/77813/29/3000/836766/5d1319abE1e91e8f8/9d8f5e625588d8d0.png",
+                    "goodName": "鲜伊品前腿肉",
+                    "goodPrice": "31.4",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":3,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/20178/19/11347/350490/5c8f00baE220b0d93/67355e382ae9a285.png",
+                    "goodName": "正大谷物鲜鸡蛋 9+3枚",
+                    "goodPrice": "13.8",
+                    "goodUnit":"盒"
+                },
+                {
+                    "id":4,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/46366/7/3448/581278/5d131e4bEcb1cd8d5/b63f1c060c6b498b.png",
+                    "goodName": "光咸蛋 1/盒（6个）",
+                    "goodPrice": "18.9",
+                    "goodUnit":"盒"
+                },
+                {
+                    "id":5,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/32293/37/8875/465023/5ca2cc71E50e09b9b/639a04a76699adc9.png",
+                    "goodName": "草原兴发绿鸟鸡（草原牧鸡）",
+                    "goodPrice": "60.8",
+                    "goodUnit":"kg"
+                }
+            ],
+            "seafood":[
+                {
+                    "id":1,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/73408/1/1807/314779/5d01e70dE7871bcbc/d94c38f587ad1ff2.png",
+                    "goodName": "麻辣小龙虾 750g",
+                    "goodPrice": "27.98",
+                    "goodUnit":"份"
+                },
+                
+                {
+                    "id":2,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/68678/29/808/477168/5cf0a12fE5c7a33ff/bc7b5d956212f085.png",
+                    "goodName": "去头红虾",
+                    "goodPrice": "39.9",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":3,
+                    "goodImg": "https://img30.360buyimg.com/n1//jfs/t1/73129/18/782/524241/5cf0a74fEd8159b22/9cbcc79a828450a9.png",
+                    "goodName": "海天下鲜贝 200g",
+                    "goodPrice": "28.8",
+                    "goodUnit":"份"
+                },
+                {
+                    "id":4,
+                    "goodImg": "https://fms-image.missfresh.cn/2c2d622559f14963bd4b81cd7daf3b9a.jpg?iopcmd=convert&dst=webp",
+                    "goodName": "舟山带鱼段",
+                    "goodPrice": "42.8",
+                    "goodUnit":"kg"
+                },
+                {
+                    "id":5,
+                    "goodImg": "https://fms-image.missfresh.cn/4f2c068eecc048d2bc394194e308a76a.jpg?iopcmd=convert&dst=webp",
+                    "goodName": "笔管鱿鱼250g",
+                    "goodPrice": "14.9",
+                    "goodUnit":"份"
+                }
+            ]
+        } 
     }
 }
