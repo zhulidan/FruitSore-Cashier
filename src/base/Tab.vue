@@ -37,6 +37,7 @@ export default {
   bottom: 0;
   display: flex;
   border-top: 1px solid #ccc;
+  z-index: 30;
   a {
     display: flex;
     flex-direction: column;

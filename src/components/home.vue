@@ -8,6 +8,13 @@
           <Search :inputPlaceholder="inputPlaceholder" @search-event="searchEventFn"></Search>
           <Product :productList="productList" :productFeild="productFiled" :type="true"></Product>
         </div>
+        <div class="right_shop_car">
+          <ul>
+            <li><i class="iconfont icon-gouwuche"></i></li>
+            <li><span>购物车</span><em>(3)</em></li>
+          </ul>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -71,6 +78,36 @@ export default {
 <style lang="less" scoped>
 .right_con {
   padding: 0 3%;
+}
+.right{
+  position: relative;
+}
+.right_shop_car{
+  position: fixed;
+  bottom: 60px;
+  right: 3%;
+  width: 80px;
+  height: 68px;
+  background: #ffb800;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px ;
+  box-sizing: border-box;
+  line-height: 35px;
+  li{
+    padding-bottom: 10px;
+    span{
+      font-size: 14px;
+    }
+    em{
+      font-size: 14px;
+    }
+  }
+  i{
+    font-size: 26px;
+    font-weight: 500
+  }
 }
 </style>
 

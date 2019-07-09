@@ -8,6 +8,7 @@
 <script>
 export default {
     name:'counter',
+    props:["goodList"],
     data(){
         return{
             number:1
