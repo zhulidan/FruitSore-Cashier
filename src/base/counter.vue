@@ -8,7 +8,7 @@
 <script>
 export default {
     name:'counter',
-    props:["goodList"],
+    props:["curGood"],
     data(){
         return{
             number:1
@@ -16,7 +16,8 @@ export default {
     },
     methods:{
         setNumberReduce(){
-            this.number = this.number - 1
+            this.number = this.number - 1;
+            console.log(this.curGood)
         },
         setNumberAdd(){
             this.number = this.number + 1

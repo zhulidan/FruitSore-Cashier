@@ -22,7 +22,7 @@
                 <span class="pro_weiBtn">称重</span>
               </div>
               <div class="product_num" v-if="item.goodUnit!='kg'">
-                <Counter :goodList="item"></Counter>
+                <Counter :curGood="item"></Counter>
               </div>
             </div>
           </li>

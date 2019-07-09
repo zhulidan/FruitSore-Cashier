@@ -44,13 +44,12 @@ export default {
 <style lang="less" scoped>
 .left {
   width: 80px;
-  height: 87.78%;
   color: #c2c2c2;
   background-color: #20222a;
   position: fixed;
   top: 40px;
   left: 0;
-  bottom: 50px;
+  bottom: 51px;
   z-index: 10;
   li {
     height: 40px;
