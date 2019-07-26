@@ -11,7 +11,7 @@
         <div class="right_shop_car">
           <ul>
             <li><i class="iconfont icon-gouwuche"></i></li>
-            <li><span>购物车</span><em>(3)</em></li>
+            <li><span>购物车</span><em>({{carCount}})</em></li>
           </ul>
           
         </div>
@@ -43,6 +43,14 @@ export default {
       ]
     };
   },
+  computed:{
+    carCount(){
+      return this.$store.state.store.saleShopCarList.length
+    }
+  },
+  watch:{
+  
+  },
   mounted() {
     this.$nextTick(function() {
       this.getProductList();
@@ -71,7 +79,9 @@ export default {
         this.getProductList(type) 
     },
 
-    async searchEventFn(val) {}
+    async searchEventFn(val) {
+
+    }
   }
 };
 </script>
